@@ -1,0 +1,40 @@
+﻿@model CustomerAPP.Models.CustomerModel
+
+@*@{
+    ViewData["Title"] = "Create";
+}
+*@
+
+
+<h6>Creacion de Clientes</h6>
+
+<form id="create-customer-form">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label class="control-label">Nombre 1</label>
+            <input asp-for="CName1" class="form-control" />
+            <span asp-validation-for="CName1" class="text-danger"></span>
+        </div>
+        <div class="form-group  col-md-6">
+            <label class="control-label">Nombre 2</label>
+            <input asp-for="CName2" class="form-control" />
+            <span asp-validation-for="CName2" class="text-danger"></span>
+        </div>
+        <div class="form-group  col-md-6">
+            <label class="control-label">Apellidos 1</label>
+            <input asp-for="CLastName1" class="form-control" />
+            <span asp-validation-for="CLastName1" class="text-danger"></span>
+        </div>
+        <div class="form-group  col-md-6">
+            <label class="control-label">Apellidos 2</label>
+            <input asp-for="CLastName2" class="form-control" />
+            <span asp-validation-for="CLastName2" class="text-danger"></span>
+        </div>
+        <div class="form-group  col-md-6">
+            <input type="submit" value="Guardar" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+
+

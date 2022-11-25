@@ -1,0 +1,55 @@
+﻿@model IEnumerable<CustomerAPP.Models.CustomerModel>
+
+
+<table class="table table-hover">
+    <thead class="table-secondary">
+        <tr>
+            <th>
+                Nombre 1
+            </th>
+            <th>
+                Nombre 2
+            </th>
+            <th>
+                Apellidos 1
+            </th>
+            <th>
+                Apellidos 2
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CName1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CName2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CLastName1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CLastName2)
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-sm add-customerphone-js" title="Agregar teléfono" data-cid="@item.CId">
+                        <i class="fa fa-plus"></i>
+                    </a> |
+                    <a class="btn btn-info btn-sm get-customerphone-js" title="Ver teléfono" data-cid="@item.CId">
+                        <i class="fa fa-eye"></i>
+                    </a> |
+                    <a class="btn btn-success btn-sm edit-customer-js" title="Modificar Cliente" data-cid="@item.CId">
+                            <i class="fa fa-pencil"></i>
+                    </a> |
+                    <a class="btn btn-danger btn-sm delete-customer-js" title="Eliminar" data-cid="@item.CId">
+                            <i class="fa fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

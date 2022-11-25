@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Clientes</h1>
+
+<div class="row">
+    <div id="div-customer-create" class="col-lg-6 col-md-6 col-sm-12">
+        <partial name="_Create" />
+    </div>
+
+</div>
+<br/>
+<div class="row">
+    <div class="col-12">
+
+        <div id="div-list-customer" class="table-responsive">
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="div-customerphone-modal" class="modal-dialog">
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/js/customer.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initCustomer();
+        });
+    </script>
+}
